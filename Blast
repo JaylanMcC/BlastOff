@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Launch Countdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Space Launch Countdown</h1>
+  <script>
+    // Countdown function by Jaylan McCoy
+    function countdown(currTime) {
+      console.log(currTime);
+      if (currTime === 0) {
+        alert("Blastoff!");
+      } else {
+        setTimeout(function() {
+          countdown(currTime - 5); // Decrement currTime by 5
+        }, 5000); // 5 seconds delay
+      }
+    }
+
+    // Initial value for countdown
+    var currTime = 50;
+
+    // Start countdown
+    countdown(currTime);
+  </script>
+</body>
+</html>
